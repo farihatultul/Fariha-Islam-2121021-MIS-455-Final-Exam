@@ -181,3 +181,22 @@ document.getElementById("search-form").onsubmit = function(event) {
         fetchCountryData(countryName);
     }
 };
+
+
+
+var pills = document.getElementsByClassName("pill");
+for (var i = 0; i < pills.length; i++) {
+    pills[i].onclick = function() {
+        
+        for (var j = 0; j < pills.length; j++) {
+            pills[j].classList.remove("active");
+        }
+        
+        this.classList.add("active");
+        
+        var region = this.textContent;
+        if (region !== "All") {
+            showErrorMessage(`Filtering by ${region} would be implemented here`);
+        }
+    };
+}
