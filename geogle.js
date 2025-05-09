@@ -116,3 +116,33 @@ function createDetailItem(label, value) {
     
     return item;
 }
+
+
+function getCurrency(currencies) {
+    if (!currencies) return "N/A";
+    
+    var currencyNames = [];
+    for (var code in currencies) {
+        if (currencies.hasOwnProperty(code)) {
+            currencyNames.push(currencies[code].name);
+        }
+    }
+    return currencyNames.join(", ");
+    
+}
+
+
+
+function getLanguages(languages) {
+    if (!languages) return "N/A";
+    
+    var languageNames = [];
+    for (var code in languages) {
+        if (languages.hasOwnProperty(code)) {
+            languageNames.push(languages[code]);
+        }
+    }
+    return languageNames.join(", ");
+  
+}
+
