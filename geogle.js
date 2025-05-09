@@ -91,9 +91,9 @@ function getTimezones(timezones) {
     
     var displayedTimezones = timezones.slice(0, 3);
     var result = displayedTimezones.join(", ");
-    
+
     if (timezones.length > 3) {
         result += `... (+${timezones.length - 3} more)`;
     }
     return result;
-}
+} 
