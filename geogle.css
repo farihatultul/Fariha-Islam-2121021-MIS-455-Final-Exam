@@ -303,3 +303,70 @@ main {
   color: #2d3748; 
   font-size: 16px; 
 }
+
+footer {
+  background-color: #2d3748; 
+  border-top: 1px solid #4a5568; 
+  padding: 60px 0 20px;
+}
+
+
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #f0f0f0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #a0aec0;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+.footer-column a:hover {
+  color: #f0f0f0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #4a5568;
+  font-size: 14.4px;
+  color: #718096;
+  width: 100%;
+}
+
+
+.pill.active {
+  background-color: #a0aec0; 
+  color: #2d3748; 
+  font-size: 16px; 
+}
+
+.pill {
+  font-size: 16px; 
+  background-color: #3b4455ab; 
+  color: #d4d4d4; 
+}
+
+.nav-links {
+  font-size: 16px; 
+}
