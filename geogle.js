@@ -97,3 +97,22 @@ function getTimezones(timezones) {
     }
     return result;
 } 
+
+
+function createDetailItem(label, value) {
+    var item = document.createElement("div");
+    item.className = "detail-item";
+    
+    var labelSpan = document.createElement("span");
+    labelSpan.className = "detail-label";
+    labelSpan.textContent = label;
+    
+    var valueSpan = document.createElement("span");
+    valueSpan.className = "detail-value";
+    valueSpan.textContent = value;
+    
+    item.appendChild(labelSpan);
+    item.appendChild(valueSpan);
+    
+    return item;
+}
