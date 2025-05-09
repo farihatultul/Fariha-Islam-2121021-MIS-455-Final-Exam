@@ -146,3 +146,38 @@ function getLanguages(languages) {
   
 }
 
+
+function showErrorMessage(message) {
+    var resultsContainer = document.getElementById("results-container");
+    resultsContainer.innerHTML = "";
+    
+    var errorDiv = document.createElement("div");
+    errorDiv.className = "error-message";
+    
+    var heading = document.createElement("h3");
+    heading.textContent = "Error";
+    
+    var errorText = document.createElement("p");
+    errorText.textContent = message;
+    
+    var suggestion = document.createElement("p");
+    suggestion.innerHTML = 'Try searching for a valid country name like "France" or "Japan"';
+    
+    errorDiv.appendChild(heading);
+    errorDiv.appendChild(errorText);
+    errorDiv.appendChild(suggestion);
+    resultsContainer.appendChild(errorDiv);
+}
+
+
+document.getElementById("search-form").onsubmit = function(event) {
+    event.preventDefault();
+    var countryInput = document.getElementById("country-input");
+    var countryName = countryInput.value.trim();
+    
+    if (countryName === "") {
+        showErrorMessage("Please enter a country name");
+    } else {
+        fetchCountryData(countryName);
+    }
+};
